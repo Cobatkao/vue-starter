@@ -1,8 +1,9 @@
 var app = new Vue({
   el: "#app",
   data: {
-    message: "hello world",
-    name: "高航"
+    message: undefined,
+    name: undefined,
+    age: undefined
   },
   methods: {
     sayMyName: function() {

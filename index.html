@@ -8,9 +8,20 @@
 </head>
 <body>
   <div id="app">
-    <span>你的名字是：{{1+1}}个字，{{name}}</span>
-    <p>{{message}}</p>
-    <p>大声点！我的名字叫：{{sayMyName()}}</p>
+    <div>
+        <input type="text" v-model="name">
+        <p v-if="name">你的名字是：{{name}}</p>
+    </div>
+    <hr />
+    <div>
+        <input type="text" v-model="message">
+        <p v-show="message">我想对你说：{{message}}</p>
+    </div>
+    <hr />
+    <div>
+        <input type="text" v-model="age">
+        <p v-show="age">大声点！我的名字叫：{{sayMyName()}}，我今年{{age}}</p>
+    </div>
   </div>
 </body>
 <script src="./lib/vue.js"></script>
