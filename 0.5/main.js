@@ -1,4 +1,4 @@
-//定义全局组件
+//注册全局组件
 // Vue.component('alert', {
 //   template: '<button @click="onClick">弹弹弹</button>',
 //   methods: {
@@ -20,7 +20,7 @@ var alert_component = {
   }
 }
 
-//定义局部组件，仅作用于seg1里头
+//注册局部组件，仅作用于seg1里头
 var app = new Vue({
   el: "#seg1",
   components: alert_component
