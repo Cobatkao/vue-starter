@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue-starter</title>
+  <style>
+    .active {
+      background: #a10;
+      color: aliceblue;
+      font-weight: 900;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div>v-for循环</div>
+    <ul>
+      <li v-for="meat in animalList">
+        动物园里有{{meat.name}}{{meat.amount}}只，一共{{meat.amount * meat.foot}}只脚！
+      </li>
+    </ul>
+    <hr>
+    <div>v-bind绑定元素</div>
+    <a :class="klass" :href="url">
+        <img :src="img">
+    </a>
+    <a :class="{active: isActive}" v-bind:href="link">上淘宝买东西！</a>
+    <hr>
+    <div>v-on绑定事件、多事件</div>
+    <button v-on="{mouseenter: onEnter, mouseleave: onOut}" @click="reverseMessage">翻转消息</button>
+    <p>{{ message }}</p>
+    <hr>
+    <div>v-model表单输入</div>
+    <p>{{ message }}</p>
+    <input v-model="message" type="text">
+    <hr>
+    <div>事件处理prevent,stop,键盘事件</div>
+    <!-- <form @submit.prevent="onSubmit" @keyup="onKeyUp($event)"> -->
+    <form @submit.prevent="onSubmit" @keyup.enter="onKeyEnter">
+      <input type="text">
+      <button type="submit">提交</button>
+    </form>
+  </div>
+</body>
+<script src="../lib/vue.js"></script>
+<script src="./js/main.js"></script>
+</html>

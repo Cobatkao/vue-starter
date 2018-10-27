@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue-model</title>
+</head>
+<body>
+  <div id="app">
+    <div>radio</div>
+    <label>
+      男
+      <input type="radio" v-model="sex" value="male">
+    </label>
+    <label>
+      女
+      <input type="radio" v-model="sex" value="female">
+    </label>
+    <label>
+      中性
+      <input type="radio" v-model="sex" value="intermeida">
+    </label>
+    <hr>
+    <div>checkbox</div>
+    <label>
+        男
+        <input type="checkbox" v-model="sex" value="male">
+      </label>
+      <label>
+        女
+        <input type="checkbox" v-model="sex" value="female">
+      </label>
+      <label>
+        中性
+        <input type="checkbox" v-model="sex" value="intermeida">
+      </label>
+      <br>
+      {{ sex }}
+      <hr>
+      <div>你要去哪里？</div>
+      <div>我要去{{dest}}</div>
+      <select v-model="dest">
+        <option value="1">厦门</option>
+        <option value="2">泉州</option>
+        <option value="3">福州</option>
+      </select>
+      <hr>
+      <div>你来自哪里？</div>
+      <select v-model="where" multiple>
+        <option value="1">厦门</option>
+        <option value="2">泉州</option>
+        <option value="3">福州</option>
+        <option value="4">广州</option>
+        <option value="5">北京</option>
+      </select>
+      <br>
+      {{ where }}
+    
+    <!-- <input type="text">
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <select name="" id=""></select> -->
+  </div>
+  <script src="../lib/vue.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
