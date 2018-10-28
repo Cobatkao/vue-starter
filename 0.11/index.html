@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue组件</title>
+  <style>
+    #app > div:not(.card) {
+      margin-top: 10px;
+      border: 1px solid green;
+      padding: 5px 2px;
+    }
+    .card {
+      color: #f00;
+      font-weight: 600;
+      box-shadow: 5px 5px 5px #777;
+      width: 40%;
+      height: 20%;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="card" v-pin:true.bottom.left="card1.pinornot">
+      <button @click="card1.pinornot = !card1.pinornot">固定/取消</button>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div class="card" v-pin.top.right="card2.pinornot">
+      <a href="#" @click="card2.pinornot = !card2.pinornot">Pin it!</a>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut dignissimos quia, cumque provident consequuntur nihil quod voluptas et totam, quisquam reiciendis architecto odio reprehenderit, dolore eaque praesentium hic cupiditate.
+    </div>
+  </div>
+  <script src="../lib/vue.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
