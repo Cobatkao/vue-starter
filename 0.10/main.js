@@ -1,3 +1,4 @@
+//过滤器
 Vue.filter('meter', function(val, unit) {
   val = val ? val : 0
   unit = unit? unit : 'm'
