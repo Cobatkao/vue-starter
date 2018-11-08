@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>router</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <router-link to="/">首页</router-link>
+      <router-link to="/about">关于我们</router-link>
+      <router-link to="/user/王花花">王花花</router-link>
+      <router-link to="/user/李欢欢">李欢欢</router-link>
+      <button @click="surf">漫游</button>
+    </div>
+    <div>
+      <router-view></router-view>
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/vue/2.5.17/vue.js"></script>
+  <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
