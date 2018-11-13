@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vuex-demo</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vuex"></script>
+</head>
+<body>
+  <div id="app">
+
+  </div>
+
+  <script>
+
+    Vue.use(Vuex)
+
+    const store = new Vuex.Store({
+      state: {
+        count: 0,
+        firstname: '高',
+        lastname: '航',
+      },
+      mutations: {
+        increment(state) {
+          return state.count++
+        },
+        modifiedName(state, newName) {
+          state.firstname = newName
+        }
+      },
+      getters: {
+        fullname(state) {
+          return state.firstname + '' + state.lastname
+        }
+      }
+    })
+    
+    const Counter = {
+      template: `
+        <div>
+          {{ count }}
+          {{ firstname }} {{ lastname }}
+          <div>我的全名是{{ fullname }}</div>
+          <button @click="add">+</button>
+        </div>
+      `,
+      computed: {
+        count() {
+          return this.$store.state.count
+        },
+        ...Vuex.mapGetters(['fullname']),
+        ...Vuex.mapState(['firstname', 'lastname'])
+      },
+      methods: {
+        add() {
+          this.$store.commit('increment')
+        }
+      }
+    }
+
+    const app = new Vue({
+      el: "#app",
+      store,
+      components: {Counter},
+      template: `
+        <div>
+          <Counter></Counter>
+        </div>
+      `
+    })
+
+  </script>
+  
+</body>
+</html>
