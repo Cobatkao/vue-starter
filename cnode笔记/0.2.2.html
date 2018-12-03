@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="观察属性" />
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>FullName: {{fullname}}</p>
+    <p>FirstName: <input type="text" v-model="firstname"></p>  
+    <p>LastName: <input type="text" v-model="lastname"></p>  
+  </div>
+  <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+  <script>
+    //观察属性实现
+    //只要firstName和lastName中的任意一个改变，全称fullname就会改变
+    var app = new Vue({
+      el: "#app",
+      data: {
+        firstname: 'Isaac',
+        lastname: 'Gao',
+        fullname: 'Isaac Kao'
+      },
+      watch: {
+        firstname: function (newName, oldName) {
+          this.fullname = newName + ' ' + this.lastname
+        },
+        lastname: function (newName, oldName) {
+          this.fullname = this.firstname + ' ' + newName
+        }
+  }
+    })
+  </script>
+</body>
+</html>

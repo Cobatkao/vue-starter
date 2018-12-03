@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <input type="text" v-model="val">
+      <button @click="reverseString">翻转字符串把！</button>
+      <p>{{val}}</p>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        val: '内容'
+      },
+      computed: {
+        reversed () {
+          return this.val.split("").reverse().join("")
+        }
+      },
+      methods: {
+        reverseString () {
+          this.val = this.reversed
+        }
+      }
+    })
+  </script>
+</body>
+</html>
