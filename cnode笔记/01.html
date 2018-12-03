@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="vue上手" />
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #btn.active {
+      color: red;
+    }
+    #btn.big {
+      font-size: 48px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <span v-text="text"></span><span>{{date | formatDate}}</span>
+      <br>
+      <span v-text="cost"></span><input type="text" v-model="price">
+      {{ price | currency('¥') }}
+      <br />
+      <button @click="test1">test1</button>
+      <button @click="test2">test2</button>
+      <button @click="test3">test3</button>
+      <hr>
+      <div :class="myClass" id="btn">红色文本2</div>
+      <button @click="btnClick">改变颜色把！</button>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+  <script>
+
+    const app = new Vue({
+      el: "#app",
+      data: {
+        date: new Date(),
+        text: '时间：',
+        cost: '交易金额：',
+        price: 10,
+        myClass: {
+          active: true,
+          big: true
+        }
+      },
+      methods: {
+        test1 () {
+          console.log(this.price)
+        },
+        test2 () {
+          console.log('这里是测试2')
+          this.test1()
+        },
+        test3 () {
+          console.log('这里是测试3')
+        },
+        btnClick () {
+          this.myClass.active = !this.myClass.active
+          this.myClass.big = !this.myClass.big
+        }
+      },
+      mounted () {
+        var _this = this
+        this.timer = setInterval(function() {
+          _this.date = new Date()
+        }, 1000)
+      },
+      beforeDestroy () {
+        if (this.timer) {
+          clearInterval(this.timer)
+        }
+      },
+      filters: {
+        currency (val, unit) {
+          val = val ? val : 0
+          unit = unit ? unit : pound
+          return val + unit
+        },
+        formatDate (value) {
+          function plusDate (val) {
+            return val < 10 ? '0' + val : val
+          }
+          var date = new Date(value)
+          var y = date.getFullYear()
+          var m = plusDate(date.getMonth() + 1)
+          var d = plusDate(date.getDate())
+          var h = plusDate(date.getHours())
+          var min = plusDate(date.getMinutes())
+          var ms = plusDate(date.getSeconds())
+          return y + '/' + m + '/' + d + '/' + h + '/' + min + '/' + ms}
+      }
+    })
+  </script>
+</body>
+</html>
